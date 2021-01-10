@@ -1,16 +1,20 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+	"log"
+	"time"
+)
 
-fun main(){
-	e := ebook{
-		name : "The little fox"
-		date: 6-6-1996,
+func main() {
+	e := &ebook{
+		name:  "The little fox",
+		date:  time.Now(),
 		study: false,
 	}
-	 err := CreateEbook(e)
-	 if err != nil{
-		 log.Fatal(err)
-	 }
-	 fmt.Println("Created! :)")
+	err := CreateEbook(e)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Created! :)")
 }
